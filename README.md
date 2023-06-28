@@ -1,5 +1,5 @@
 # VULCAN GRADES EXPORTING
-App to exporting grades from [Vulcan](https://vulcan.edu.pl/)' by Cocolak
+App to exporting grades from [Vulcan](https://vulcan.edu.pl/)' by Cocolak <br>
 E-mail: cocolak333@gmail.com
 
 ## APP USAGE
