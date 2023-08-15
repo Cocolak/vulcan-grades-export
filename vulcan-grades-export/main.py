@@ -1,4 +1,4 @@
-###  App to exporting grades from 'uonetplus.vulcan.net.pl' by Cocolak
+    ###  App to exporting grades from 'uonetplus.vulcan.net.pl' by Cocolak
 ###  For more read README.txt
 
 def get_keystore():
