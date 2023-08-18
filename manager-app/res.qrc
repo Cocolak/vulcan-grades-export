@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="images">
+    <file>Assets/user.png</file>
+    <file>Assets/journar.png</file>
+    <file>Assets/menu.png</file>
+    <file>Assets/home.png</file>
+    <file>Assets/refresh.png</file>
+    <file>Assets/planning.png</file>
+    <file>Assets/paper.png</file>
+    <file>Assets/grade.png</file>
+    <file>Assets/exit.png</file>
+    <file>Assets/email.png</file>
+    <file>Assets/application.png</file>
+    <file>Assets/rose-petals.png</file>
+    <file>Assets/background.jpg</file>
+    <file>Assets/github-mark-white.png</file>
+  </qresource>
+</RCC>

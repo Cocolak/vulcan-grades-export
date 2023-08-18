@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManagerWindow</class>
+ <widget class="QWidget" name="ManagerWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>870</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QWidget" name="mainwidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#mainwidget{
+border-image: url(:/images/rose-petals.png);
+border-radius:40px;
+}
+
+QWidget#icon_sidebar, #full_sidebar {
+background-color:rgba(85,5,35,255);
+border-top-left-radius:40px;
+border-bottom-left-radius:40px;
+}
+
+QPushButton{
+border-top:1px solid black;
+background-color:rgba(0,0,0,0);
+padding:8px;
+}
+QPushButton:hover{
+background-color:rgba(0,0,0,30);
+}
+QPushButton:pressed{
+background-color:rgba(0,0,0,60);
+}
+QPushButton:checked{
+background-color:rgba(0,0,0,60);
+}
+
+
+
+</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="icon_sidebar" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>70</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <item>
+            <widget class="QPushButton" name="homeButton_1">
+             <property name="styleSheet">
+              <string notr="true">border-top:none;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/home.png</normaloff>:/images/Assets/home.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="gradesButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/grade.png</normaloff>:/images/Assets/grade.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="messagesButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/email.png</normaloff>:/images/Assets/email.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="examsButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/paper.png</normaloff>:/images/Assets/paper.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="timetableButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom:1px solid black;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/planning.png</normaloff>:/images/Assets/planning.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>427</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetMinimumSize</enum>
+           </property>
+           <item>
+            <widget class="QPushButton" name="changeaccButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/refresh.png</normaloff>:/images/Assets/refresh.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="featuresButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/application.png</normaloff>:/images/Assets/application.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="exitButton_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgba(0,0,0,0);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/exit.png</normaloff>:/images/Assets/exit.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="full_sidebar" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="homeButton_2">
+             <property name="styleSheet">
+              <string notr="true">border-top:none;</string>
+             </property>
+             <property name="text">
+              <string>Home</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/home.png</normaloff>:/images/Assets/home.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="gradesButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Grades</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/grade.png</normaloff>:/images/Assets/grade.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="messagesButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Messages</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/email.png</normaloff>:/images/Assets/email.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="examsButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Exams</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/paper.png</normaloff>:/images/Assets/paper.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="timetableButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-bottom:1px solid black;</string>
+             </property>
+             <property name="text">
+              <string>Time Table</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/planning.png</normaloff>:/images/Assets/planning.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>451</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="changeaccButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Change Account</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/refresh.png</normaloff>:/images/Assets/refresh.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="featuresButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Features</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/application.png</normaloff>:/images/Assets/application.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="exitButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Exit</string>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/exit.png</normaloff>:/images/Assets/exit.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="content" native="true">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border:none;
+padding:0px;
+}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>15</number>
+           </property>
+           <property name="topMargin">
+            <number>15</number>
+           </property>
+           <property name="rightMargin">
+            <number>15</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="menuButton">
+             <property name="styleSheet">
+              <string notr="true">QPushButton:checked {
+background-color:rgba(0,0,0,0);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/menu.png</normaloff>:/images/Assets/menu.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="profileButton">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/Assets/user.png</normaloff>:/images/Assets/user.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QStackedWidget" name="stackedWidget">
+           <widget class="QWidget" name="home_page"/>
+           <widget class="QWidget" name="grades_page">
+            <property name="styleSheet">
+             <string notr="true">QWidget{
+background-color:rgba(0,0,0,0);
+}</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QToolBox" name="toolBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>782</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>782</height>
+                </size>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="page">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>100</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <attribute name="label">
+                 <string>Page</string>
+                </attribute>
+                <widget class="QWidget" name="widget" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1218</width>
+                   <height>200</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_3">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>100</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <attribute name="label">
+                 <string>Page</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="page_2">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>100</width>
+                  <height>30</height>
+                 </rect>
+                </property>
+                <attribute name="label">
+                 <string>Page</string>
+                </attribute>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="messages_page"/>
+           <widget class="QWidget" name="exams_page"/>
+           <widget class="QWidget" name="timetable_page"/>
+           <widget class="QWidget" name="features_page"/>
+           <widget class="QWidget" name="profile_page"/>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>icon_sidebar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menuButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>full_sidebar</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>186</x>
+     <y>484</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>homeButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>homeButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>133</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gradesButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gradesButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>messagesButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>messagesButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>examsButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examsButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>163</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>timetableButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>timetableButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>featuresButton_1</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>featuresButton_2</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>760</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>770</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>homeButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>homeButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gradesButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gradesButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>messagesButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>messagesButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>150</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>47</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>examsButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examsButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>timetableButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>timetableButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>featuresButton_2</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>featuresButton_1</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>765</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>57</x>
+     <y>752</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

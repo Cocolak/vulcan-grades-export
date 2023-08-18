@@ -1,0 +1,18 @@
+- when app run check if user is logged or no
+    - if no show pop up window - Do you want to register?
+        - if no, close app
+        - if yes, go to registerwindow
+    if yes, go to managerwindow
+
+- check and add pages with titles (subjects) and labels (grades)
+
+## Sidebar
+- Profile
+- Grades
+- Homeworks
+- Messages
+- Lessons
+- Features
+- Change account
+- Exit
+

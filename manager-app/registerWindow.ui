@@ -53,7 +53,7 @@ background-color:rgba(150,0, 100, 255);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/images/background.jpg);
+     <string notr="true">border-image: url(:/images/Assets/background.jpg);
 border-radius:20px;
 </string>
     </property>
@@ -73,6 +73,7 @@ border-radius:20px;
     <property name="font">
      <font>
       <pointsize>23</pointsize>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -161,6 +162,7 @@ padding-bottom:7px;</string>
     <property name="font">
      <font>
       <pointsize>12</pointsize>
+      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -183,6 +185,16 @@ border-radius:20px;</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res.qrc">
+      <normaloff>:/images/Assets/github-mark-white.png</normaloff>:/images/Assets/github-mark-white.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="tutorialButton">
@@ -211,7 +223,7 @@ border:none;</string>
   </widget>
  </widget>
  <resources>
-  <include location="../f2a5ab68/res.qrc"/>
+  <include location="res.qrc"/>
  </resources>
  <connections/>
 </ui>
