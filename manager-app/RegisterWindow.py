@@ -3,6 +3,7 @@ import res
 
 class Ui_RegisterWindow(object):
     def setupUi(self, RegisterWindow):
+        self.RegisterWindow = RegisterWindow
         RegisterWindow.setObjectName("RegisterWindow")
         RegisterWindow.resize(450, 600)
         RegisterWindow.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -83,7 +84,7 @@ class Ui_RegisterWindow(object):
         font.setBold(True)
         self.regButton.setFont(font)
         self.regButton.setObjectName("regButton")
-        self.regButton.clicked.connect(self.Register)
+        self.regButton.clicked.connect(self.registerClicked)
 
         ## Tutorial
         self.tutorialButton = QtWidgets.QPushButton(self.widget)
@@ -92,6 +93,7 @@ class Ui_RegisterWindow(object):
         self.tutorialButton.setStyleSheet("background-color:rgba(0,0,0,0);\n"
                                         "border:none;")
         self.tutorialButton.setObjectName("tutorialButton")
+        self.tutorialButton.clicked.connect(self.tutorialClicked)
 
 
         self.githubButton = QtWidgets.QPushButton(self.widget)
@@ -100,6 +102,7 @@ class Ui_RegisterWindow(object):
                                         "border-radius:20px;")
         self.githubButton.setText("")
         self.githubButton.setObjectName("githubButton")
+        self.githubButton.clicked.connect(self.githubClicked)
 
         # Add window shadow
         self.registerLabel.setGraphicsEffect(QtWidgets.QGraphicsDropShadowEffect(blurRadius=25, xOffset=0, yOffset=0, color=QtGui.QColor(185, 30, 90, 100)))
@@ -118,19 +121,40 @@ class Ui_RegisterWindow(object):
         self.regButton.setText(_translate("RegisterWindow", "Register"))
         self.tutorialButton.setText(_translate("RegisterWindow", "Where to find this data?"))
 
-    def Register(self):
+    def tutorialClicked(self):
+        ## TODO update funcion
+        pass
+
+    def githubClicked(self):
+        import webbrowser
+        webbrowser.open('https://github.com/Cocolak')
+
+    def registerClicked(self):
+        from PyQt5.QtWidgets import QMessageBox
         import vulcan_chandle as vc
         import asyncio
-        from concurrent.futures import ThreadPoolExecutor
 
         token = self.tokenLineEdit.text().upper().strip()
         symbol = self.symbolLineEdit.text().strip()
         pin = self.pinLineEdit.text().strip()
         
-        loop = asyncio.get_event_loop()
-        executor = ThreadPoolExecutor()
+        isRegister = asyncio.run(vc.register(token, symbol, pin))
 
-        
+        if isRegister == True:
+            msg = QMessageBox()
+            msg.setWindowTitle("Successful register")
+            msg.setText("Successful register.")
+            msg.setIcon(QMessageBox.Information)
+            msg.exec_()
 
-        asyncio.run(vc.register(token, symbol, pin))
+            ## TODO Login
+
+        elif isRegister == False:
+            msg = QMessageBox()
+            msg.setWindowTitle("Failed register")
+            msg.setText("Failed register. Try again.")
+            msg.setIcon(QMessageBox.Information)
+            msg.exec_()
+
+
 
