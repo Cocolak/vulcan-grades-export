@@ -1,17 +1,15 @@
 import vulcan_chandle as vc
-import asyncio
+import asyncio, sys
+from PyQt5 import QtWidgets
+from MenuWindow import Ui_MenuWindow
 
-try:
-    loop = asyncio.get_running_loop()
-except RuntimeError:
-    loop = None
-
-if loop  and loop.is_running():
-    tsk = loop.create_task(vc.login())
-
-else:
-    result = asyncio.run(vc.login())
-
-
-
-##asyncio.run(vc.login())
+app = QtWidgets.QApplication(sys.argv)
+window = QtWidgets.QMainWindow()
+ui = Ui_MenuWindow()
+ui.setupUi(window)
+qr = window.frameGeometry()
+cp = QtWidgets.QDesktopWidget().availableGeometry().center()
+qr.moveCenter(cp)
+window.move(qr.topLeft())
+window.show()
+sys.exit(app.exec_())

@@ -16,3 +16,5 @@
 - Change account
 - Exit
 
+- Możliwość logowania (wybrania plików) lub porada aby stworzyć folder !_reg i wrzucić do niego pliki
+

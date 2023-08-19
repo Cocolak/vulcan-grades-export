@@ -10,17 +10,23 @@ def get_account():
 
 async def register(token, symbol, pin):
     from vulcan import Keystore, Account
+    import os
+
+    if not os.path.exists("!_reg"):
+        os.makedirs("!_reg")
     
     keystore = await Keystore.create(device_model="Vulcan Manager")
     with open("!_reg/keystore.json", "w") as f: f.write(keystore.as_json)
     
     try: account = await Account.register(keystore, token, symbol, pin)
-    except:
-        print("Nieprawidłowe dane") 
-        ## TODO Komunikat 
-        return
-
+    except: return False
+    
     with open("!_reg/account.json", "w") as f: f.write(account.as_json)
+
+    return True
+
+
+
 
 async def login():
     def runRegisterWindow():
