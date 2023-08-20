@@ -10,9 +10,9 @@ E-mail: cocolak333@gmail.com
 - select 'y'.
 - now you need to log in to your school's Vulcan account in browser (https://uonetplus.vulcan.net.pl/symbol)
 - then go to Mobile access/Dostęp mobilny in your student/parent panel and click "generate access code".
-![image](https://raw.githubusercontent.com/Cocolak/vulcan-grades-export/master/docs/qrkod.jpg)
+![image](https://raw.githubusercontent.com/Cocolak/vulcan-manager/master/vulcan-grades-export/docs/qrkod.jpg)
 - you need rewrite the data located below the QR code into the application (pay attention to the letter case).
-![image](https://raw.githubusercontent.com/Cocolak/vulcan-grades-export/master/docs/login.png)
+![image](https://raw.githubusercontent.com/Cocolak/vulcan-manager/master/vulcan-grades-export/docs/login.png)
 - you are now logged in, all data has been saved in "!_reg"
 
 ### The application shuts down
