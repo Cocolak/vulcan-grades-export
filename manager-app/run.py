@@ -1,14 +1,18 @@
 from PyQt5 import QtWidgets
-import sys, os
-from RegisterWindow import Ui_RegisterWindow
+import sys
+import asyncio
+import vulcan_chandle as vc
 
-if not os.path.exists("!_reg"):
-    os.makedirs("!_reg")
+isLogin, client = asyncio.run(vc.login())
+
+if isLogin:
+    from ManagerWindow import Ui_ManagerWindow
 
     app = QtWidgets.QApplication(sys.argv)
+
     window = QtWidgets.QMainWindow()
-    ui = Ui_RegisterWindow()
-    ui.setupUi(window)
+    ui = Ui_ManagerWindow()
+    ui.setupUi(window, client)
     qr = window.frameGeometry()
     cp = QtWidgets.QDesktopWidget().availableGeometry().center()
     qr.moveCenter(cp)
@@ -17,4 +21,16 @@ if not os.path.exists("!_reg"):
     sys.exit(app.exec_())
 
 else:
-    print("Zalogowano")
+    from MenuWindow import Ui_MenuWindow
+
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = QtWidgets.QMainWindow()
+    ui = Ui_MenuWindow()
+    ui.setupUi(window)
+    qr = window.frameGeometry()
+    cp = QtWidgets.QDesktopWidget().availableGeometry().center()
+    qr.moveCenter(cp)
+    window.move(qr.topLeft())
+    window.show()
+    sys.exit(app.exec_())

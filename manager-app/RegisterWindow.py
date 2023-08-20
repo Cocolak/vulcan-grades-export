@@ -147,7 +147,10 @@ class Ui_RegisterWindow(object):
             msg.setIcon(QMessageBox.Information)
             msg.exec_()
 
-            ## TODO Login
+            isLogin, client = asyncio.run(vc.login())
+
+            if isLogin:
+                self.runManagerWindow(client)
 
         elif isRegister == False:
             msg = QMessageBox()
@@ -155,6 +158,19 @@ class Ui_RegisterWindow(object):
             msg.setText("Failed register. Try again.")
             msg.setIcon(QMessageBox.Information)
             msg.exec_()
+    
+    def runManagerWindow(self, client):
+        from ManagerWindow import Ui_ManagerWindow
 
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_ManagerWindow()
+        self.ui.setupUi(self.window, client)
+        qr = self.window.frameGeometry()
+        cp = QtWidgets.QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.window.move(qr.topLeft())
+        
+        self.LoginWindow.close()
+        self.window.show()
 
 

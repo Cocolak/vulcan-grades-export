@@ -2,8 +2,10 @@ import vulcan_chandle as vc
 import asyncio, sys
 from PyQt5 import QtWidgets
 from MenuWindow import Ui_MenuWindow
+from ManagerWindow import Ui_ManagerWindow
 
 app = QtWidgets.QApplication(sys.argv)
+
 window = QtWidgets.QMainWindow()
 ui = Ui_MenuWindow()
 ui.setupUi(window)
