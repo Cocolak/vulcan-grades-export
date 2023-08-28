@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="images">
+    <file>Assets/attendance.png</file>
     <file>Assets/user.png</file>
     <file>Assets/journar.png</file>
     <file>Assets/menu.png</file>

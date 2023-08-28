@@ -170,7 +170,7 @@ class Ui_RegisterWindow(object):
         qr.moveCenter(cp)
         self.window.move(qr.topLeft())
         
-        self.LoginWindow.close()
+        self.RegisterWindow.close()
         self.window.show()
 
 
